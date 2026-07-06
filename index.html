@@ -38,7 +38,6 @@
             padding: 0 20px;
         }
 
-        /* Navegación */
         nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -63,6 +62,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: float 3s ease-in-out infinite;
+            text-decoration: none;
         }
 
         @keyframes float {
@@ -100,7 +100,6 @@
             width: 100%;
         }
 
-        /* Hero */
         .hero {
             background: linear-gradient(135deg, var(--rose) 0%, var(--blue) 50%, var(--mint) 100%);
             color: var(--dark);
@@ -172,6 +171,7 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
+            margin: 0.5rem;
         }
 
         .btn:hover {
@@ -179,11 +179,6 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
         }
 
-        .btn:active {
-            transform: translateY(-2px);
-        }
-
-        /* Proyectos */
         .projects {
             padding: 5rem 0;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(180, 215, 255, 0.2));
@@ -258,12 +253,6 @@
             position: relative;
         }
 
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         .card-content {
             padding: 2rem;
         }
@@ -319,7 +308,6 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
         }
 
-        /* Contacto */
         .contact {
             background: linear-gradient(135deg, var(--lavender) 0%, var(--rose) 100%);
             color: white;
@@ -392,7 +380,6 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
         }
 
-        /* Footer */
         footer {
             background: var(--dark);
             color: white;
@@ -406,7 +393,6 @@
             font-weight: 500;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             nav ul {
                 gap: 1rem;
@@ -438,36 +424,6 @@
             }
         }
 
-        @media (max-width: 480px) {
-            nav .container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0.8rem;
-                text-align: center;
-            }
-
-            .hero {
-                padding: 3rem 0;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .btn {
-                padding: 0.8rem 2rem;
-            }
-
-            .contact {
-                padding: 3rem 0;
-            }
-        }
-
-        /* Animaciones adicionales */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -487,131 +443,85 @@
         .card:nth-child(2) { animation-delay: 0.2s; }
         .card:nth-child(3) { animation-delay: 0.3s; }
         .card:nth-child(4) { animation-delay: 0.4s; }
-        .card:nth-child(5) { animation-delay: 0.5s; }
-        .card:nth-child(6) { animation-delay: 0.6s; }
     </style>
 </head>
 <body>
-    <!-- Navegación -->
     <nav>
         <div class="container">
-            <div class="logo">✨ Isa ✨</div>
+            <a href="index.html" class="logo">✨ Isa ✨</a>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#proyectos">Mis Intereses</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero -->
     <section id="inicio" class="hero">
         <div class="container">
             <h1>Sitio de Isa⋆˚꩜｡</h1>
             <p>Estudiante del LEV</p>
-            <p class="subtitle">Creando proyectos increíbles con tecnología y creatividad</p>
-            <button class="btn" onclick="document.getElementById('proyectos').scrollIntoView({behavior: 'smooth'})">Ver mis proyectos 🎮</button>
+            <p class="subtitle">Explorando mis pasiones: música 🎵, videojuegos 🎮 y mucho más</p>
         </div>
     </section>
 
-    <!-- Proyectos -->
     <section id="proyectos" class="projects">
         <div class="container">
-            <h2 class="section-title">Mis Proyectos</h2>
-            <p class="section-subtitle">Explora mis creaciones escolares y personales</p>
+            <h2 class="section-title">Mis Intereses</h2>
+            <p class="section-subtitle">Descubre lo que me apasiona</p>
             <div class="grid">
                 <div class="card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #FFB6D9, #FFC0CB);">
-                        🎮
-                    </div>
+                    <div class="card-image" style="background: linear-gradient(135deg, #FFB6D9, #FFC0CB);">📚</div>
                     <div class="card-content">
                         <div class="card-header">
-                            <h3>Calculadora</h3>
-                            <span class="tag">JavaScript</span>
+                            <h3>Libros Favoritos</h3>
+                            <span class="tag">Studio Ghibli</span>
                         </div>
-                        <p>Una calculadora interactiva para realizar operaciones matemáticas. Proyecto donde aprendí los fundamentos de JavaScript.</p>
+                        <p>Una colección de historias mágicas de Studio Ghibli. Mundos fantásticos que me inspiran.</p>
                         <div class="card-footer">
-                            <a href="#" style="background: linear-gradient(135deg, #FFB6D9, #FF69B4);">Ver más</a>
+                            <a href="libros.html" style="background: linear-gradient(135deg, #FFB6D9, #FF69B4);">Explorar</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #B4D7FF, #87CEEB);">
-                        📝
-                    </div>
+                    <div class="card-image" style="background: linear-gradient(135deg, #B4D7FF, #87CEEB);">🎮</div>
                     <div class="card-content">
                         <div class="card-header">
-                            <h3>Lista de Tareas</h3>
-                            <span class="tag">HTML/CSS/JS</span>
+                            <h3>Videojuegos</h3>
+                            <span class="tag">Quiero Jugar</span>
                         </div>
-                        <p>Aplicación para gestionar tareas diarias. Puedes agregar, completar y eliminar tareas de forma muy sencilla.</p>
+                        <p>Mis videojuegos favoritos que quiero jugar. Desde aventuras oscuras hasta acción pura.</p>
                         <div class="card-footer">
-                            <a href="#" style="background: linear-gradient(135deg, #B4D7FF, #4169E1);">Ver más</a>
+                            <a href="videojuegos.html" style="background: linear-gradient(135deg, #B4D7FF, #4169E1);">Descubre</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #B4F0D9, #90EE90);">
-                        🍽️
-                    </div>
+                    <div class="card-image" style="background: linear-gradient(135deg, #B4F0D9, #90EE90);">🎤</div>
                     <div class="card-content">
                         <div class="card-header">
-                            <h3>Página de Recetas</h3>
-                            <span class="tag">HTML/CSS</span>
+                            <h3>Artistas Favoritos</h3>
+                            <span class="tag">Música</span>
                         </div>
-                        <p>Un sitio web con mis recetas favoritas. Proyecto para practicar HTML, CSS y diseño responsivo moderno.</p>
+                        <p>Mis artistas y bandas favoritas que me acompañan en todo momento. Soda Stereo, Nirvana, Mana y más.</p>
                         <div class="card-footer">
-                            <a href="#" style="background: linear-gradient(135deg, #B4F0D9, #3CB371);">Ver más</a>
+                            <a href="artistas.html" style="background: linear-gradient(135deg, #B4F0D9, #3CB371);">Escuchar</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #FFF9C4, #FFD700);">
-                        🎯
-                    </div>
+                    <div class="card-image" style="background: linear-gradient(135deg, #FFF9C4, #FFD700);">🎸</div>
                     <div class="card-content">
                         <div class="card-header">
-                            <h3>Juego de Memoria</h3>
-                            <span class="tag">JavaScript</span>
+                            <h3>Instrumentos & Metal</h3>
+                            <span class="tag">🤘 Metal</span>
                         </div>
-                        <p>Un juego interactivo donde debes encontrar parejas de tarjetas. Trabajo práctico para aprender lógica de programación.</p>
+                        <p>Mis instrumentos favoritos y las legendarias bandas de metal que me inspiran. Black Sabbath, Metallica y más.</p>
                         <div class="card-footer">
-                            <a href="#" style="background: linear-gradient(135deg, #FFF9C4, #FFD700);">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #E6D5FF, #DDA0DD);">
-                        🖼️
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3>Galería de Fotos</h3>
-                            <span class="tag">HTML/CSS</span>
-                        </div>
-                        <p>Una galería de fotos con efectos hover animados. Proyecto para aprender sobre diseño responsivo y CSS avanzado.</p>
-                        <div class="card-footer">
-                            <a href="#" style="background: linear-gradient(135deg, #E6D5FF, #9370DB);">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-image" style="background: linear-gradient(135deg, #FFD9B3, #FFB347);">
-                        📚
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3>Mi Primer Blog</h3>
-                            <span class="tag">HTML/CSS</span>
-                        </div>
-                        <p>Un blog simple donde publico mis reflexiones sobre programación y aprendizaje. Mi primer proyecto web.</p>
-                        <div class="card-footer">
-                            <a href="#" style="background: linear-gradient(135deg, #FFD9B3, #FF8C00);">Ver más</a>
+                            <a href="instrumentos.html" style="background: linear-gradient(135deg, #FFF9C4, #FFD700);">Ver Más</a>
                         </div>
                     </div>
                 </div>
@@ -619,7 +529,6 @@
         </div>
     </section>
 
-    <!-- Contacto -->
     <section id="contacto" class="contact">
         <div class="container">
             <h2>¡Contáctame! 💕</h2>
@@ -632,47 +541,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>✨ Sitio de Isa⋆˚꩜｡ 2026 - Hecho con 💕 y JavaScript</p>
         </div>
     </footer>
-
-    <script>
-        // Efecto paralax suave en scroll
-        window.addEventListener('scroll', () => {
-            const hero = document.querySelector('.hero');
-            const scrollY = window.scrollY;
-            if (hero) {
-                hero.style.transform = `translateY(${scrollY * 0.5}px)`;
-            }
-        });
-
-        // Efecto de hover en cards
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.boxShadow = '0 30px 60px rgba(0, 0, 0, 0.2)';
-            });
-            card.addEventListener('mouseleave', function() {
-                this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.08)';
-            });
-        });
-
-        // Scroll suave para navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>

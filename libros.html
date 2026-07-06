@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artistas Favoritos - Isa</title>
+    <title>Libros Favoritos - Isa</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -14,10 +14,9 @@
         }
 
         :root {
+            --rose: #FFB6D9;
+            --blue: #B4D7FF;
             --mint: #B4F0D9;
-            --lavender: #E6D5FF;
-            --yellow: #FFF9C4;
-            --peach: #FFD9B3;
             --cream: #FFFAF0;
             --dark: #2D1B4E;
         }
@@ -68,11 +67,11 @@
         }
 
         nav a:hover {
-            color: #FFB6D9;
+            color: var(--rose);
         }
 
         .header {
-            background: linear-gradient(135deg, var(--mint) 0%, var(--lavender) 100%);
+            background: linear-gradient(135deg, var(--rose) 0%, var(--blue) 100%);
             padding: 4rem 0;
             text-align: center;
             color: var(--dark);
@@ -93,62 +92,51 @@
             padding: 4rem 0;
         }
 
-        .artists-grid {
+        .books-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2.5rem;
         }
 
-        .artist-card {
+        .book-card {
             background: white;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            border-top: 4px solid var(--mint);
+            border-top: 4px solid var(--rose);
         }
 
-        .artist-card:hover {
+        .book-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
         }
 
-        .artist-image {
+        .book-image {
             width: 100%;
             height: 250px;
-            background: linear-gradient(135deg, var(--mint), var(--lavender));
+            background: linear-gradient(135deg, var(--rose), var(--blue));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
         }
 
-        .artist-content {
+        .book-content {
             padding: 1.5rem;
         }
 
-        .artist-content h3 {
+        .book-content h3 {
             font-size: 1.3rem;
             margin-bottom: 0.5rem;
             color: var(--dark);
         }
 
-        .artist-content p {
+        .book-content p {
             color: var(--dark);
             opacity: 0.8;
             line-height: 1.6;
             font-size: 0.95rem;
-        }
-
-        .genre {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--yellow), var(--peach));
-            color: var(--dark);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-top: 1rem;
         }
 
         footer {
@@ -157,12 +145,12 @@
             text-align: center;
             padding: 2.5rem 0;
             margin-top: 3rem;
-            border-top: 3px solid var(--mint);
+            border-top: 3px solid var(--rose);
         }
 
         @media (max-width: 768px) {
             .header h1 { font-size: 2rem; }
-            .artists-grid { grid-template-columns: 1fr; }
+            .books-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -176,29 +164,29 @@
 
     <section class="header">
         <div class="container">
-            <h1>🎤 Artistas Favoritos</h1>
-            <p>La música que me inspira y acompaña cada día</p>
+            <h1>📚 Libros Favoritos</h1>
+            <p>Historias mágicas de Studio Ghibli que me inspiran</p>
         </div>
     </section>
 
     <section class="content">
         <div class="container">
-            <div class="artists-grid">
-                <div class="artist-card"><div class="artist-image">🎸</div><div class="artist-content"><h3>Soda Stereo</h3><p>La banda argentina legendaria. Rock progresivo y letras profundas que trascienden generaciones.</p><span class="genre">Rock Alternativo</span></div></div>
-                <div class="artist-card"><div class="artist-image">🎭</div><div class="artist-content"><h3>Enjambre</h3><p>Rock indie mexicano con influencias post-punk. Emotivo, crudo y sincero.</p><span class="genre">Rock Indie</span></div></div>
-                <div class="artist-card"><div class="artist-image">✨</div><div class="artist-content"><h3>Mana</h3><p>Rock progresivo mexicano épico. Conciertos inolvidables y música que define una era.</p><span class="genre">Rock Progresivo</span></div></div>
-                <div class="artist-card"><div class="artist-image">🖤</div><div class="artist-content"><h3>Maneskin</h3><p>Rock italiano moderno con actitud y energía pura. Ganadores de Eurovisión.</p><span class="genre">Rock Moderno</span></div></div>
-                <div class="artist-card"><div class="artist-image">🌧️</div><div class="artist-content"><h3>Nirvana</h3><p>Grunge revolucionario. Kurt Cobain y su legado eterno en la música rock.</p><span class="genre">Grunge</span></div></div>
-                <div class="artist-card"><div class="artist-image">💫</div><div class="artist-content"><h3>The Smiths</h3><p>Rock alternativo indie icónico. Lyrics poéticas que tocan el corazón.</p><span class="genre">Rock Alternativo</span></div></div>
-                <div class="artist-card"><div class="artist-image">🎼</div><div class="artist-content"><h3>Joy Division</h3><p>Post-punk pionero. Atmósfera oscura y melancólica que define un género.</p><span class="genre">Post-Punk</span></div></div>
-                <div class="artist-card"><div class="artist-image">🌙</div><div class="artist-content"><h3>The Cure</h3><p>Síntesis perfecta de new wave y post-punk. Dark, atmosférico e hipnotizante.</p><span class="genre">Post-Punk/New Wave</span></div></div>
+            <div class="books-grid">
+                <div class="book-card"><div class="book-image">📖</div><div class="book-content"><h3>El Viaje de Chihiro</h3><p>Una aventura mágica a través de un mundo de espíritus. La historia de Chihiro y su valentía.</p></div></div>
+                <div class="book-card"><div class="book-image">🍃</div><div class="book-content"><h3>Mi Vecino Totoro</h3><p>La historia de dos hermanas que descubren criaturas mágicas en el bosque. Pura magia infantil.</p></div></div>
+                <div class="book-card"><div class="book-image">✨</div><div class="book-content"><h3>Kaguya</h3><p>La historia de la princesa de la luna. Una obra maestra visual y emocional de Ghibli.</p></div></div>
+                <div class="book-card"><div class="book-image">🌸</div><div class="book-content"><h3>Arrietty</h3><p>Una aventura pequeña en un mundo grande. La vida de los pequeños habitantes invisibles.</p></div></div>
+                <div class="book-card"><div class="book-image">🏰</div><div class="book-content"><h3>El Castillo en el Cielo</h3><p>Una aventura épica en busca de la mítica isla flotante. Aventura, amistad y descubrimiento.</p></div></div>
+                <div class="book-card"><div class="book-image">🌊</div><div class="book-content"><h3>Ponyo</h3><p>La historia de un niño y una criatura marina. Amistad pura y amor incondicional.</p></div></div>
+                <div class="book-card"><div class="book-image">🎨</div><div class="book-content"><h3>Susurros del Corazón</h3><p>Una historia sobre el crecimiento y la autoexploración de una joven apasionada.</p></div></div>
+                <div class="book-card"><div class="book-image">🧙</div><div class="book-content"><h3>El Castillo Ambulante</h3><p>Magia, romance y un misterio en un castillo que se mueve. Pura fantasía y romance.</p></div></div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>✨ Sitio de Isa⋆˚꩜｡ - La música es el arte 🎵</p>
+            <p>✨ Sitio de Isa⋆˚꩜｡ - Historias que inspiran 💕</p>
         </div>
     </footer>
 </body>

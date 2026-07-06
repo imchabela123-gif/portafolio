@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrumentos & Bandas de Metal - Isa</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --yellow: #FFF9C4;
+            --peach: #FFD9B3;
+            --rose: #FFB6D9;
+            --cream: #FFFAF0;
+            --dark: #2D1B4E;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background: linear-gradient(135deg, var(--cream) 0%, #FFF5E6 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FF69B4, #87CEEB, #90EE90);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--rose);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2D1B4E 0%, #1a0f2e 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 4rem 0;
+        }
+
+        .instruments-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--dark);
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .instruments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .instrument-card {
+            background: linear-gradient(135deg, var(--yellow), var(--peach));
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .instrument-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .instrument-card h3 {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: var(--dark);
+        }
+
+        .instrument-emoji {
+            font-size: 5rem;
+            margin: 1rem 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .instrument-card p {
+            color: var(--dark);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .bands-section {
+            margin-top: 3rem;
+        }
+
+        .bands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .band-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--rose);
+            border-left: 5px solid var(--peach);
+        }
+
+        .band-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .band-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .band-card h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .band-card p {
+            color: var(--dark);
+            opacity: 0.8;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .band-type {
+            display: inline-block;
+            background: var(--rose);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+            border-top: 3px solid var(--rose);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+            .bands-grid { grid-template-columns: 1fr; }
+            .instruments-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">✨ Isa ✨</a>
+            <a href="index.html">← Volver</a>
+        </div>
+    </nav>
+
+    <section class="header">
+        <div class="container">
+            <h1>🎸 Instrumentos & Bandas de Metal 🤘</h1>
+            <p>La pasión por el metal y el rock que resuena en mi alma</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="instruments-section">
+                <h2 class="section-title">🎵 Mis Instrumentos Favoritos</h2>
+                <div class="instruments-grid">
+                    <div class="instrument-card"><div class="instrument-emoji">🎸</div><h3>Guitarra Eléctrica</h3><p>El instrumento rey del rock y metal. Sonidos épicos, riffs memorables y solos que trascienden.</p></div>
+                    <div class="instrument-card"><div class="instrument-emoji">🥁</div><h3>Batería</h3><p>El corazón rítmico. Poleas, dobles kicks y patrones que definen el metal moderno.</p></div>
+                    <div class="instrument-card"><div class="instrument-emoji">🎹</div><h3>Bajo Eléctrico</h3><p>El puente entre ritmo y melodía. Líneas de bajo que crean la base del sonido metal.</p></div>
+                </div>
+            </div>
+
+            <div class="bands-section">
+                <h2 class="section-title">🎸 Classic Metal - Las Leyendas</h2>
+                <div class="bands-grid">
+                    <div class="band-card"><div class="band-emoji">👹</div><h3>Black Sabbath</h3><p>Los pioneros absolutos del metal. "Paranoid" y "Iron Man" son eternos. Ozzy legendario.</p><span class="band-type">Heavy Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">⚔️</div><h3>Iron Maiden</h3><p>Épicos riffs de guitarra y voces operísticas. "Number of the Beast" es immortal.</p><span class="band-type">Heavy Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">🔥</div><h3>Judas Priest</h3><p>Rob Halford y su voz de fuego. Metal puro en su forma más brutal y gloriosa.</p><span class="band-type">Heavy Metal</span></div>
+                </div>
+
+                <h2 class="section-title">⚡ Thrash Metal - The Big Four (Los 4 Grandes)</h2>
+                <div class="bands-grid">
+                    <div class="band-card"><div class="band-emoji">🔨</div><h3>Metallica</h3><p>Los reyes del thrash metal. "Master of Puppets" cambió la música para siempre. Legendarios.</p><span class="band-type">Thrash Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">🎯</div><h3>Megadeth</h3><p>Dave Mustaine y sus riffs técnicos alucinantes. "Symphony of Destruction" es una obra maestra.</p><span class="band-type">Thrash Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">💀</div><h3>Slayer</h3><p>Velocidad extrema y brutalidad pura. Tom Araya gritando la verdad del metal.</p><span class="band-type">Thrash Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">⚡</div><h3>Anthrax</h3><p>Groove thrash épico. El cuarto pilar que completa los Big Four del metal moderno.</p><span class="band-type">Thrash Metal</span></div>
+                </div>
+
+                <h2 class="section-title">🤘 Más Bandas Metal Legendarias</h2>
+                <div class="bands-grid">
+                    <div class="band-card"><div class="band-emoji">🎸</div><h3>AC/DC</h3><p>Hard rock clásico que roza el metal. Riffs simples pero DEVASTADORES. Eternos.</p><span class="band-type">Hard Rock/Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">🌪️</div><h3>Slipknot</h3><p>Nu metal agresivo y crudo. Máscaras icónicas y energía desenfrenada.</p><span class="band-type">Nu Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">🖤</div><h3>System of a Down</h3><p>Metal progresivo loco. Voces hipnotizantes de Serj Tankian. Únicos y memorables.</p><span class="band-type">Alternative Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">🔮</div><h3>Tool</h3><p>Metal progresivo experimental. Perfeccionismo musical llevado al extremo.</p><span class="band-type">Progressive Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">💔</div><h3>Deftones</h3><p>Metal atmosphérico y hermoso. Chino Moreno con voces como ángeles oscuros.</p><span class="band-type">Alternative Metal</span></div>
+                    <div class="band-card"><div class="band-emoji">👽</div><h3>Sepultura</h3><p>Thrash metal brasileño brutal. Max Cavalera gritando revoluciones metálicas.</p><span class="band-type">Thrash Metal</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>✨ Sitio de Isa⋆˚꩜｡ - El metal vive eternamente 🤘 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
